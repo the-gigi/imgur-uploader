@@ -19,7 +19,7 @@ def upload(client_id, filename):
 def main():
     parser = ArgumentParser()
     parser.add_argument('--client-id',
-                        required=True,
+                        default=CLIENT_ID,
                         help='Imgur client ID')
     parser.add_argument('--filename',
                         required=True,
