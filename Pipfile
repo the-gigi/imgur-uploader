@@ -1,0 +1,18 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+
+
+[packages]
+
+pyimgur = "==0.5.2"
+pillow = "*"
+pyobjc-core = "*"
+pyobjc = "*"
+pyautogui = "*"
