@@ -9,5 +9,9 @@ You need to have an imgur account and a [registered imgur application](http://ap
 
 # Usage
 
-    python imgur_uploader.py --client-id=<Imgur client ID> --filename=<file to upload> 
+    python imgur_uploader.py [--client-id=<Imgur client ID>] [--filename=<file to upload>]
+
+
+- The client ID can be defined in environment variable IMGUR_CLIENT_ID
+- If you don't provide a filename it will upload an iamge from the clipboard
     
