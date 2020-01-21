@@ -9,9 +9,20 @@ You need to have an imgur account and a [registered imgur application](http://ap
 
 # Usage
 
-    python imgur_uploader.py [--client-id=<Imgur client ID>] [--filename=<file to upload>]
+```
+# pipenv run python imgur_uploader.py [--client-id=<Imgur client ID>] [image files to upload]
+```
+
+It will print the filenames and corresponding URLs of the uploaded images.
+If you don't provide any filename it will upload an image from the clipboard
+and print its URL.
+
+The client ID can be defined in environment variable IMGUR_CLIENT_ID
 
 
-- The client ID can be defined in environment variable IMGUR_CLIENT_ID
-- If you don't provide a filename it will upload an iamge from the clipboard
-    
+# Reference
+
+[Imgur API auth](https://apidocs.imgur.com/?version=latest#authorization-and-oauth)
+
+[Imgur account | get images](https://apidocs.imgur.com/?version=latest#ee366f7c-69e6-46fd-bf26-e93303f64c84)
+

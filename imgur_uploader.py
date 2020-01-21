@@ -27,11 +27,20 @@ def main():
     parser.add_argument('--client-id',
                         default=CLIENT_ID,
                         help='Imgur client ID')
-    parser.add_argument('--filename',
-                        help='The image file to upload')
+    parser.add_argument('filenames',
+                        nargs='+',
+                        help='The image files to upload')
     args = parser.parse_args()
-    url = upload(args.client_id, args.filename)
-    print(url)
+    filenames = args.filenames
+    if not filenames:
+        url = upload(args.client_id, None)
+        print(url)
+        return
+
+    for filename in args.filenames:
+        url = upload(args.client_id, filename)
+        print(f'{filename}: {url})
+
 
 
 if __name__ == '__main__':
