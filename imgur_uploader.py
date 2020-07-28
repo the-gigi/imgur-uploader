@@ -5,7 +5,6 @@ import pyimgur
 from PIL import Image, ImageGrab
 from pathlib import Path
 
-
 CLIENT_ID = os.environ.get('IMGUR_CLIENT_ID', None)
 
 
@@ -39,8 +38,7 @@ def main():
 
     for filename in args.filenames:
         url = upload(args.client_id, filename)
-        print(f'{filename}: {url})
-
+        print(f'{filename}: {url}')
 
 
 if __name__ == '__main__':
