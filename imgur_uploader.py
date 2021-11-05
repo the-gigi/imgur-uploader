@@ -36,8 +36,9 @@ def main():
         print(url)
         return
 
+    client_id = args.client_id if args.client_id else CLIENT_ID
     for filename in args.filenames:
-        url = upload(args.client_id, filename)
+        url = upload(client_id, filename)
         print(f'{filename}: {url}')
 
 
